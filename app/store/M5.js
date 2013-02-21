@@ -1,4 +1,4 @@
-Ext.define('FI.store.M1', {
+Ext.define('FI.store.M5', {
     extend: 'FI.store.Values',	
 			
 	//autoLoad: true,
@@ -6,10 +6,10 @@ Ext.define('FI.store.M1', {
 		
     proxy: {
         type: 'ajax',
-        url : 'history/M1',		
+        url : 'history/M5',		
         reader: {
             type: 'json', 	
-			root: 'M1'
+			root: 'M5'
         }
     }
 				

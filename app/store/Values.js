@@ -16,25 +16,24 @@ Ext.define('FI.store.Values', {
         }
     },
 	
-	loadFIdata: function( data ) {
-		
+	loadFIdata: function( data ) {		
 		var me = this;
+		
 		var newRecord = Ext.create('FI.model.Values', data);
 		newRecord.calcIndexes();
-		var foundRecord = me.findRecord('time', newRecord.get('time'));
-		
-		if (foundRecord == null) {				
-			me.add( newRecord );
-			var removed = me.getAt(0);
-			me.remove ( removed );
-		} else {
-			me.remove( foundRecord );			
-			me.add( newRecord );
-		}					
 						
-					// TODO search store for same time and if null, add if not update
-					//me.add( json );
-					
+		if (me.getCount() != 0) {		
+			var foundRecord = me.findRecord('time', newRecord.get('time'));
+			
+			if (foundRecord == null) {				
+				me.add( newRecord );
+				var removed = me.getAt(0);
+				me.remove ( removed );
+			} else {
+				me.remove( foundRecord );			
+				me.add( newRecord );
+			}																		
+		}
 		
 	},			
 	

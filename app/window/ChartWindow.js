@@ -5,8 +5,8 @@ Ext.define('FI.window.ChartWindow', {
         'Ext.chart.Chart'
     ],
     
-	height: 500,
-    width: 750,
-    layout: 'fit',
-       
+	height: 300,
+    width: 650,
+    layout: 'fit'
+    		
 });

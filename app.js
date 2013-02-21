@@ -1,7 +1,9 @@
 Ext.application({
     requires: [
 		'Ext.container.Viewport',
-		'FI.view.layout.Template'	
+		'FI.view.layout.Template',
+		//'highstock.ux.HighStock',
+		//'highstock.ux.SampleConfigs'
 	],
 	
 	controllers: [

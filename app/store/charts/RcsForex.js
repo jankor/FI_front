@@ -7,7 +7,7 @@ Ext.define('FI.store.charts.RcsForex', {
     ],
 	
 	period: 14,
-	bufferSize: 60,		
+	bufferSize: 100,		
 	modelMap: [
 		{sourceData: 'EURx', pos: 0.00000000, neg: 0.00000000, resultData: 'EURrcs'}, 
 		{sourceData: 'USDx', pos: 0.00000000, neg: 0.00000000, resultData: 'USDrcs'},
